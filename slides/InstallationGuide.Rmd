@@ -1,0 +1,88 @@
+---
+title: "Anaconda Python Installation"
+author: ["Jessica Leung"]
+date: "6 Dec 2022"
+---
+
+## Anaconda Python Installation:
+
+Participants are expected to have Anaconda and Python installed and are familiar with Jupyter Notebook or other Python editor. We will be working on Jupyter Notebook during the tutorial.
+
+[Python](https://www.python.org/){target="_blank"} is a popular language for research computing, data science AND and general-purpose programming. We recommend using [Anaconda](https://www.anaconda.com/products/distribution){target="_blank"}, an all-in-one installer of python and many of it's most useful packages for scientific computing. Please make sure you install Python version 3.x (e.g., 3.7 is fine).
+
+We will teach Python using the [Jupyter notebook](https://jupyter.org/){target="_blank"}, a programming environment that runs in a web browser. For this to work you will need a reasonably up-to-date browser. The current versions of the Chrome, Safari and Firefox browsers are all [supported](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility){target="_blank"} (some older browsers, including Internet Explorer version 9 and below, are not).
+
+### Installation instruction
+
+1. Open the [Anaconda download page](https://www.anaconda.com/download/){target="_blank"} with your web browser.
+
+2. Download the Python 3 graphical installer for Windows or OS X (depends on your machine). 
+
+3. Install Python 3 using all of the defaults for installation. (For windows: make sure to check  _Add Anaconda to my PATH environment variable_ if asked.)
+
+### Start Using Jupyter Notebook
+
+_Windows_
+
+1. Open the Anaconda prompt. You should see a black box.
+
+2. Copy/paste the following command into the prompt and press `Enter`:  `jupyter notebook`
+
+3. The Jupyter notebook interface should pop up with your default browser.
+
+_macOS_
+
+1. Open a terminal window (Find the "Terminal" app in you Applications or use Spotlight search to search for terminal). You should see a white box.
+
+2. Copy/paste the following command into the terminal and press `Return`: `jupyter notebook`
+
+3. The Jupyter notebook interface should pop up with your default browser.
+
+### Creating separate environment
+
+Sometimes you may want to create a separate environment for individual projects so that you can manage the package versions and requirements separately.
+
+Say, if you have installed Anaconda with Python 3.8 or above, you can either re-install your anaconda with Python 3.7 or  you can create an environment for Python 3.7.
+
+How to create an environment:
+
+`conda create --name py37 python=3.7`
+
+To start using the environment, you need to type the following command in the terminal:
+
+For Windows: `activate py37`
+
+For Linux, macOS: `source activate py37`
+
+### Installing other packages
+
+[Conda](https://conda.io/projects/conda/en/latest/index.html){target="_blank"} is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer.
+
+1. Go to the [anaconda](https://anaconda.org/){target="_blank"} webpage.
+
+2. Search for the package you need and copy the command to your terminal.
+
+Note: Some packages may require you to use a specific channel (e.g. conda-forge). You can add channels following the procedures below.
+
+_Installing CVXPY_
+
+We can use conda to install the package CVXPY via the channel conda-forge.
+
+1. Open the Anaconda prompt (for Windows) or a terminal window (for macOS).
+
+2. Copy/paste the following command into the terminal and press `Enter`:  `conda config --add channels conda-forge`
+
+3. Copy/paste the following command into the terminal and press `Enter`: `conda config --set channel_priority strict`
+
+4. Copy/paste the following command into the terminal and press `Enter`:  `conda install -c cvxgrp cvxpy`
+
+5. When you see `Proceed ([y]/n)?`,  type `y` and press `Enter`.
+
+Alternatively, you can also try the following:
+
+`conda install pip`
+
+`pip install --upgrade setuptools`
+
+`pip install cvxpy`
+
